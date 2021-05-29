@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4331d41e-c3e5-4c02-9393-14432caf843d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/inetBanking/testCases/TC_TestNG_Practice.java" afterPath="$PROJECT_DIR$/src/test/java/com/inetBanking/testCases/TC_TestNG_Practice.java" />
-    </list>
+    <list default="true" id="4331d41e-c3e5-4c02-9393-14432caf843d" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />

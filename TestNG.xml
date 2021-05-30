@@ -2,22 +2,22 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="InetBankingV1" parallel="tests" thread-count="3">
-    <listeners>
-        <listener class-name="com.inetBanking.utilities.Reporting" />
-    </listeners>
+    <!--<listeners>-->
+        <!--<listener class-name="com.inetBanking.utilities.Reporting" />-->
+    <!--</listeners>-->
     <test name="--BankingApp Test" parallel="classes">
-        <parameter name="browser" value="chrome"/>
-        <groups><run>
-            <include name="Regression"/>
-        </run></groups>
+        <!--<parameter name="browser" value="chrome"/>-->
+        <!--<groups><run>-->
+            <!--<include name="Regression"/>-->
+        <!--</run></groups>-->
 
         <classes>
-            <class name="com.inetBanking.testCases.TC_LoginTest_001" >
-            <methods>
-                <exclude name="loginTest"/>
-            </methods>
+            <class name="com.inetBanking.testCases.TC_TestNG_Practice" >
+            <!--<methods>-->
+                <!--&lt;!&ndash;<exclude name="loginTest"/>&ndash;&gt;-->
+            <!--</methods>-->
             </class>
-            <class name="com.inetBanking.testCases.TC_LoginDDT_002"/>
+            <!--<class name="com.inetBanking.testCases.TC_LoginDDT_002"/>-->
         </classes>
     </test>
 </suite>

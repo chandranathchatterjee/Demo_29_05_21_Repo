@@ -11,7 +11,6 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.TestListenerAdapter;
-
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;

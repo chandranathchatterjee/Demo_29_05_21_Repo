@@ -1,12 +1,15 @@
 package com.inetBanking.testCases;
 
+import com.inetBanking.pageObjects.LoginPage;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -24,6 +27,8 @@ public class Practice_test {
         Thread.sleep(3000);
         driver.manage().window().maximize();
         Select select = new Select(driver.findElement(By.xpath("")));
+        WebDriverWait wait = new WebDriverWait(driver,10);
+
 
         List<WebElement> drpdwnItems =driver.findElements(By.xpath(""));
         for (WebElement item:drpdwnItems){
@@ -42,7 +47,7 @@ public class Practice_test {
             }
         }
         Actions builder=new Actions(driver);
-        builder.moveToElement(driver.findElement(By.id(""))).build().perform();
+        builder.moveToElement(driver.findElement(By.id(""))).keyDown(Keys.SHIFT).build().perform();
         driver.findElement(By.id("ctl00_mainContent_ddl_originStation1_CTXT")).click();
 
         List<WebElement> links= driver.findElements(By.tagName("a"));

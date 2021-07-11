@@ -30,7 +30,6 @@ public class TC_LoginDDT_002 extends BaseClass {
         js.executeScript("window.scrollBy(0,1000)");
         WebDriverWait wait =new WebDriverWait(driver,20);
         wait.until(ExpectedConditions.visibilityOfElementLocated((By) lp.btnLogin));
-
         Wait wait1 = new FluentWait(driver).pollingEvery(Duration.ofSeconds(10)).withTimeout(Duration.ofSeconds(60)).ignoring(Exception.class);
 
         driver.findElement((By) lp.btnLogin).click();

@@ -7,17 +7,19 @@
         <listener class-name="com.inetBanking.utilities.MyTransformer"/>
     </listeners>
     <test name="--BankingApp Test" parallel="classes">
-        <!--<parameter name="browser" value="chrome"/>-->
+        <parameter name="browser" value="chrome"/>
+        <parameter name="myName" value="chandranath chatterjee"/>
         <!--<groups><run>-->
             <!--<include name="Regression"/>-->
         <!--</run></groups>-->
 
         <classes>
             <class name="com.inetBanking.testCases.TC_TestNG_Practice" >
-            <!--<methods>-->
-                <!--&lt;!&ndash;<exclude name="loginTest"/>&ndash;&gt;-->
-            <!--</methods>-->
+            <methods>
+                <include name="testCase_2"/>
+            </methods>
             </class>
+            <!--<class name="com.inetBanking.testCases.TC_Demo_DBTestData"></class>-->
             <!--<class name="com.inetBanking.testCases.TC_LoginDDT_002"/>-->
         </classes>
     </test>

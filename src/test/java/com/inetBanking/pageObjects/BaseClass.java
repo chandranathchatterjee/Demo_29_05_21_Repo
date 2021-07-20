@@ -19,10 +19,7 @@ import org.openqa.selenium.interactions.SourceType;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.*;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -45,7 +42,7 @@ public class BaseClass {
     public static Logger logger;
 
     @Parameters("browser")
-    @BeforeClass
+    @BeforeTest
     public void setUp(@Optional("firefox") String br){
 
         logger= Logger.getLogger(BaseClass.class);
@@ -53,6 +50,7 @@ public class BaseClass {
        //For basic configurator--It will print the output on the console
         // BasicConfigurator.configure();
 
+        System.out.println("The parameter browser is : "+br);
 
         if(br.equalsIgnoreCase("chrome")) {
             //1st way of handling SSL
@@ -62,7 +60,7 @@ public class BaseClass {
             dc.acceptInsecureCerts();
 //            System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"//Drivers//chromedriver.exe");
             System.setProperty("webdriver.chrome.driver", readconfig.getChromePath());
-            driver = new ChromeDriver(dc);
+           // driver = new ChromeDriver(dc);
 
             //2nd way of handling SSL and Insecure Certification
             ChromeOptions chromeOptions = new ChromeOptions();
@@ -96,7 +94,7 @@ public class BaseClass {
 
     }
 
-    @AfterClass
+    @AfterTest
     public void tearDown(){
         driver.quit();
     }

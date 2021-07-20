@@ -6,8 +6,9 @@
         <!--<listener class-name="com.inetBanking.utilities.Reporting" />-->
         <listener class-name="com.inetBanking.utilities.MyTransformer"/>
     </listeners>
-    <test name="--BankingApp Test" parallel="classes">
-        <parameter name="browser" value="chrome"/>
+    <parameter name="browser" value="chrome"/>
+    <test name="--BankingApp Test">
+
         <parameter name="myName" value="chandranath chatterjee"/>
         <!--<groups><run>-->
             <!--<include name="Regression"/>-->
